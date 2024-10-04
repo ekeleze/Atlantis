@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -6,6 +6,16 @@
     <RootNamespace>Minecraft_Server</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	<NativeAot>true</NativeAot>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Packets\test.cs" />
+    <Compile Remove="Program.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Packets\NewFile1.txt" />
+  </ItemGroup>
 
 </Project>
