@@ -55,6 +55,8 @@ namespace Minecraft_Server
 
             logger.Info("Starting Minecraft server on " + (serverIp == string.Empty ? "*" : serverIp) + ":" + serverPort);
 
+            // We need to bind to the port and display the "**** FAILED TO BIND TO PORT!" message if it fails here.
+
             if (onlineMode == false)
             {
                 logger.Warn("**** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!");
