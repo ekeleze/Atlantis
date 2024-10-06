@@ -60,7 +60,7 @@ namespace Minecraft_Server
                 logger.Warn("**** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!");
                 logger.Warn("The server will make no attempt to authenticate usernames. Beware.");
                 logger.Warn("While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.");
-                logger.Warn("To change this, set \"online-mode\" to \"true\" in the server.settings file.");
+                logger.Warn("To change this, set \"online-mode\" to \"true\" in the server.properties file.");
             }
 
             while (true) { }

@@ -6,7 +6,7 @@
     <RootNamespace>Minecraft_Server</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	<NativeAot>true</NativeAot>
+	  <NativeAot>true</NativeAot>
   </PropertyGroup>
 
   <ItemGroup>
