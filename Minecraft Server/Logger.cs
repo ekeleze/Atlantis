@@ -19,7 +19,7 @@ namespace Minecraft_Server
         public void Warn(string text) 
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("[WARN] ");
+            Console.Write("[WARN] ");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(text);
         }
@@ -27,7 +27,7 @@ namespace Minecraft_Server
         public void Error(string text)
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("[ERROR] ");
+            Console.Write("[ERROR] ");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(text);
         }
@@ -35,7 +35,7 @@ namespace Minecraft_Server
         public void Fatal(string text)
         {
             Console.ForegroundColor = ConsoleColor.DarkRed;
-            Console.WriteLine("[FATAL] ");
+            Console.Write("[FATAL] ");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(text);
         }

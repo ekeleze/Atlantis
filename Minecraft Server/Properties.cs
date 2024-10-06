@@ -10,11 +10,6 @@ namespace Minecraft_Server
     {
         private Dictionary<string, object> properties = new Dictionary<string, object>();
 
-        public Properties()
-        {
-
-        }
-
         public bool AddPropertyFromLine(string line)
         {
             if (line.StartsWith("#")) return true;
@@ -52,6 +47,32 @@ namespace Minecraft_Server
             }
 
             return null;
+        }
+
+        public bool TryGetProperty(string key, out object val)
+        {
+            if (properties.TryGetValue(key, out _))
+            {
+                properties.TryGetValue(key, out val!);
+                return true;
+            }
+
+            val = null!;
+            return false;
+        }
+
+        public object GetPropertyFromLine(string line)
+        {
+            if (line.StartsWith("#")) return null!;
+            else if (line.EndsWith("=") || line.StartsWith("=")) return null!;
+            else
+            {
+                string[] data = line.Split("=");
+
+                if (int.TryParse(data[1], out _)) return int.Parse(data[1]); 
+                else if (bool.TryParse(data[1], out _)) return bool.Parse(data[1]);
+                else return data[1];
+            }
         }
     }
 }
