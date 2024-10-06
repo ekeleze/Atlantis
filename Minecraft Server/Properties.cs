@@ -18,7 +18,7 @@ namespace Minecraft_Server
             {
                 string[] data = line.Split("=");
 
-                if (int.TryParse(data[1], out _)) AddProperty(data[0], int.Parse(data[1])); 
+                if (long.TryParse(data[1], out _)) AddProperty(data[0], long.Parse(data[1])); 
                 else if (bool.TryParse(data[1], out _)) AddProperty(data[0], bool.Parse(data[1]));
                 else AddProperty(data[0], data[1]);
 
